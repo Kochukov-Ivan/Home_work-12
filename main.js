@@ -59,7 +59,9 @@ let div = document.querySelector(".out"); // создаю вторую пере�
 let div2 = document.querySelector(".bool");
 input.onkeypress = function (event) {
   let e = input.value; // e = значению введенному в инпут
+  if (e != "") {
   div.innerHTML = e.charCodeAt(0); // выводит в поле на странице код символа ( НО ПЕРВОЕ ЗНАЧЕНИЕ ПОЧЕМУ ТО 'NAN' )
   console.log(event.charCode);
   div2.innerHTML = isNaN(e); //работает но так же как и chatCode т.е. со второго введенного значения
+}
 };
